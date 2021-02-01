@@ -1,0 +1,45 @@
+// main: ../style.less
+
+.nav {
+    display: flex;
+    align-items: center;
+    height: 100%;
+
+    @media @mobile {
+        display: none;
+    }
+
+    @media @mobile-sm {
+        margin-right: 0;
+    }
+
+}
+
+.nav__link {
+    padding: 0.66rem 2rem;
+    font-size: 0.93rem;
+    color: @black;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-decoration: none;
+
+    border: 2px solid transparent;
+    border-radius: 20px;
+
+    &:hover,
+    &.active {
+        border-color: rgba(#6A696B,0.7);
+        transition: transform 0.2s linear;
+
+    &:hover {
+        transform:
+            translateY(-5px)
+    }
+    }
+
+    &--btn {
+     padding: 0.66rem;
+        border: 2px solid @black;
+        border-radius: 20px;
+    }
+}
