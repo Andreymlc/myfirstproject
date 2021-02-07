@@ -25,9 +25,9 @@
            </div>
            <div class="nav">
                <a class="nav__link" href="#">Работа</a>
-               <a class="nav__link" href="#">Обо мне</a>
+               <a class="nav__link" href="#" data-modal="#modal_resume">Обо мне</a>
                <a class="nav__link" href="#">Блог</a>
-               <a class="nav__link nav__link--btn" href="#">Связь со мной</a>
+               <a class="nav__link nav__link--btn" href="#" data-modal="#modal_hire_me">Связь со мной</a>
            </div>
 
            <div class="burger">
@@ -57,8 +57,9 @@
                         <img src="https://img.icons8.com/ios/50/000000/facebook.png"/>
                     </a>
                 </div>
-                <a href="#" class="btn">Связь со мной</a>
-                <button class="btn" type="button">Моё резюме</button>
+
+                <a href="#" class="btn" data-modal="#modal_hire_me">Связь со мной</a>
+                <button class="btn" type="button" data-modal="#modal_resume">Моё резюме</button>
             </div>
             <div class="intro__photo">
                 <img src="images/designer_photo.svg" alt="">
@@ -77,12 +78,12 @@
             <a href="#" class="woks__nav-link" data-filter="website">Websites</a>
             <a href="#" class="woks__nav-link" data-filter="interaction">Interaction</a>
         </div>
-        <div class="portfolio">
-            <div class="portfolio__col" data-cat="Websites">
-                <div class="work">
+        <div class="portfolio" id="portfolio">
+            <div class="portfolio__col" data-cat="website">
+                <div class="work" data-modal="#modal_project_1">
                     <img class="work__image" src="images/works_1.png" alt="" width="370" height="250">
                     <div class="work__content">
-                        <div class="work__cat">Категория: Websites</div>
+                        <div class="work__cat">Категория: website</div>
                         <div class="work__title">
                             Портфолио
                             <time class="work__date" datetime="2021-01-01 00:00">2021</time>
@@ -90,7 +91,7 @@
                     </div>
                 </div>
             </div>
-            <div class="portfolio__col" data-cat="App">
+            <div class="portfolio__col" data-cat="app">
                 <div class="work">
                     <img class="work__image" src="images/works_2.jpg" alt="" width="370" height="250">
                     <div class="work__content">
@@ -291,9 +292,9 @@
 
             <nav class="footer__nav">
                 <a class="footer__nav-link" href="#">Работа</a>
-                <a href="#" class="footer__nav-link">Обо мне</a>
+                <a href="#" class="footer__nav-link" data-modal="#modal_resume">Обо мне</a>
                 <a href="#" class="footer__nav-link">Блог</a>
-                <a href="#" class="footer__nav-link footer__nav-link--btn">Связь со мной</a>
+                <a href="#" class="footer__nav-link footer__nav-link--btn" data-modal="#modal_hire_me">Связь со мной</a>
             </nav>
         </div><!-- /.footer__inner -->
     </div><!-- /.container -->
@@ -301,16 +302,16 @@
 
 
 <!-- Modals -->
-<div class="modal" style="display: none">
+<div class="modal" id="modal_project_1">
     <div class="modal__dialog">
 
-        <button class="modal__close" type="button">
+        <button class="modal__close" type="button" data-close>
             <img src="images/cancel.svg" alt="Close">
         </button>
 
         <div class="modal-work">
            <div class="modal-work__preview">
-               <img class="modal-work__photo" src="https://placehold.it/1650x780" alt="">
+               <img class="modal-work__photo" src="https://placehold.it/1100x800" alt="">
            </div>
             <div class="modal-work__content">
                <div class="modal-work__header">
@@ -335,16 +336,6 @@
                     </p>
                 </div>
 
-                <div class="modal-work__footer">
-                     <button class="modal-work__btn" type="button">
-                        <img src="images/left-arrow.svg" height="12" alt="">
-                         Предыдущий
-                     </button>
-                     <button class="modal-work__btn" type="button">
-                     Следующий
-                     <img src="images/right-arrow.svg" height="12" alt="">
-                     </button>
-                </div>
 
             </div><!-- /.modal-work__content -->
 
@@ -353,11 +344,53 @@
     </div><!-- /.modal__dialog -->
 </div><!-- /.Modals -->
 
-
-<div class="modal" style="display: none">
+<div class="modal" id="modal_project_1">
     <div class="modal__dialog">
 
-        <button class="modal__close" type="button">
+        <button class="modal__close" type="button" data-close>
+            <img src="images/cancel.svg" alt="Close">
+        </button>
+
+        <div class="modal-work">
+           <div class="modal-work__preview">
+               <img class="modal-work__photo" src="https://placehold.it/1100x800" alt="">
+           </div>
+            <div class="modal-work__content">
+               <div class="modal-work__header">
+                    <h3 class="modal-work__title">Название проекта</h3>
+                    <div class="modal-work__info">
+                        Категория <span class="modal-work__info-divider">|</span> 2021
+                    </div>
+                </div>
+
+
+            <div class="modal-work__client">
+                <div class="modal-work__client-title">Клиент:</div>
+                <div class="modal-work__client-company">Креативное Агенство</div>
+            </div>
+
+                <div class="modal-work__text">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, sint provident praesentium nihil dicta, assumenda. Ratione unde dicta repellat! Earum quia impedit dicta natus velit nobis harum fuga consequuntur repellendus.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, sint provident praesentium nihil dicta, assumenda. Ratione unde dicta repellat! Earum quia impedit dicta natus velit nobis harum fuga         consequuntur repellendus.
+                    </p>
+                </div>
+
+
+            </div><!-- /.modal-work__content -->
+
+        </div><!-- /.modal-work -->
+
+    </div><!-- /.modal__dialog -->
+</div>
+
+<!-- Modals -->
+<div class="modal" id="modal_resume">
+    <div class="modal__dialog">
+
+        <button class="modal__close" type="button" data-close>
             <img src="images/cancel.svg" alt="Close">
         </button>
 
@@ -473,10 +506,11 @@
     </div><!-- /.modal__dialog -->
 </div><!-- /.Modals -->
 
-<div class="modal" style="display: none">
+<!-- Modals -->
+<div class="modal" id="modal_hire_me">
     <div class="modal__dialog modal__dialog--sm">
 
-        <button class="modal__close" type="button">
+        <button class="modal__close" type="button" data-close>
             <img src="images/cancel.svg" alt="Close">
         </button>
 
@@ -511,7 +545,9 @@
                     </form>
 
                 </div><!-- /.contact__left -->
-                <div class="contact__right"></div>
+                <div class="contact__right">
+                    <img src="images/works-1.png" alt="">
+                </div>
             </div>
 
     </div><!-- /.modal__dialog -->
