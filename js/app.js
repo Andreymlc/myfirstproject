@@ -63,10 +63,8 @@ $(function() {
         $("body").removeClass('no-scroll');
     });
 
-        $(".modal__dialog").on("click", function(event) {
-        event.stopPropagation
-        $(this).removeClass('show');
-        $("body").removeClass('no-scroll');
+    $(".modal__dialog").on("click", function(event) {
+       event.stopPropagation();
     });
 
 });
